@@ -5,15 +5,15 @@ on:
       CPU:
         description: "分支"
         required: true
-        default: 'sm8650'
+        default: 'sm8550'
       FEIL:
         description: "配置文件"
         required: true
-        default: 'oneplus_ace5'
+        default: 'oneplus_ace3_v'
       CPUD:
         description: "处理器代号"
         required: true
-        default: 'pineapple'
+        default: 'kalama'
       ANDROID_VERSION:
         description: "内核安卓版本"
         required: true
@@ -21,11 +21,11 @@ on:
       KERNEL_VERSION:
         description: "内核版本"
         required: true
-        default: '6.1'
+        default: '5.15'
       KERNEL_NAME:
         description: "自定义内核名称"
         required: true
-        default: '-android14-11-o-g54d4b575ebf6'
+        default: '-android13-8-o-g54d4b575ebf6'
 #     KERNEL_VER:
 #       description: "自定义版本"
 #       required: true
@@ -40,7 +40,7 @@ on:
           - MKSU
           - RKSU
           - MKSU-SKN
-        default: KSU
+        default: MKSU
       kernelsu_version:
         description: "选择 KSU 版本"
         required: true
@@ -53,12 +53,12 @@ on:
         description: "添加 SUSFS"
         required: true
         type: boolean
-        default: true
+        default: false
       VFS_patch_ENABLED:
         description: "添加vfs补丁(New Hook)？"
         required: true
         type: boolean
-        default: true
+        default: false
 jobs:
   build:
     runs-on: ubuntu-latest
